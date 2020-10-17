@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<main>
+	<section id="landing" class="container py-5">
+		<div class="row align-items-center">
+			<div class="col-12 col-md-6 col-lg-6">
+				<h1 class="font-serif font-weight-bold">
+					{{ site.title | replace: "-", "-<span class='text-primary'>" | append: "</span>" }}
+					&mdash; {{ site.title_long }}
+				</h1>
+				<p>{{ site.description | smartify }}</p>
+				<p>
+					<a href="https://github.com/{{ site.github_username }}" class="btn btn-primary btn-lg d-block">
+						<span class="fab fa-github" aria-hidden="true"></span>
+						View on GitHub
+					</a>
+				</p>
+			</div>
+			<div class="col-12 col-md-6 col-lg-6">
+				<img src="{{ '/assets/images/landing.svg' }}" alt="" class="w-100">
+			</div>
+		</div>
+	</section>
+
+	<section class="container text-center h1 display">
+		{{ content }}
+	</section>
+</main>
